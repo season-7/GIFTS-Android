@@ -13,11 +13,14 @@ public class CoolText extends AppCompatActivity {
         setContentView(R.layout.activity_cool_text);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 
-       /* TextText writer = new TextText(this);
-        setContentView(writer);*/
+        /*start*/
+
+
+       /*end;*/
 
         //Add a character every 150ms
         TextText writer = (TextText) findViewById(R.id.typewriter);
