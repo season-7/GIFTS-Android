@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "809174394506",
+    "firebase_url": "https://giftsapp-667a2.firebaseio.com",
+    "project_id": "giftsapp-667a2",
+    "storage_bucket": "giftsapp-667a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809174394506:android:e531dcb088108c10",
+        "android_client_info": {
+          "package_name": "com.example.mitchelle.somasoma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809174394506-ogn62vjv269fvoq0s1ufc5srs17kd2gl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mitchelle.somasoma",
+            "certificate_hash": "172C2ACC3DF26DA8D5E4FCC09784FC60360B2D40"
+          }
+        },
+        {
+          "client_id": "809174394506-k5derjr2c98813ivspfk6p41p5t9rn01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRI1s7FR7f6d_U8QKMVpDaotpH1MQpIxg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809174394506-k5derjr2c98813ivspfk6p41p5t9rn01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
