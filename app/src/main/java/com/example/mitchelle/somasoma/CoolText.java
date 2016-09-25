@@ -6,8 +6,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
-public class CoolText extends AppCompatActivity {
+public class CoolText extends AppCompatActivity implements View.OnClickListener{
+
+    Button press;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,5 +53,14 @@ public class CoolText extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        press=(Button) findViewById(R.id.cool);
+
+
+
     }
 }
