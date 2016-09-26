@@ -12,6 +12,6 @@ public class Activity2 extends SwipeBackActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_2);
-        setDragEdge(SwipeBackLayout.DragEdge.LEFT);
+        setDragEdge(SwipeBackLayout.DragEdge.RIGHT);
     }
 }
