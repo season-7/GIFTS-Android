@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -27,14 +28,21 @@ public class ActivityLogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(ActivityLogin.this, SignUpActivity.class));
-            finish();
+
+            startActivity(new Intent(ActivityLogin.this, MainActivity.class));
+
+           /* finish();*/
         }
+        // seting the view now
         setContentView(R.layout.activity_activity_login);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
@@ -49,14 +57,18 @@ public class ActivityLogin extends AppCompatActivity {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(ActivityLogin.this, SignUpActivity.class));
+
             }
         });
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(ActivityLogin.this, ActivityResetPassword.class));
+
             }
         });
 
@@ -95,7 +107,9 @@ public class ActivityLogin extends AppCompatActivity {
                                         Toast.makeText(ActivityLogin.this, getString(R.string.auth_failed), Toast.LENGTH_LONG).show();
                                     }
                                 } else {
+
                                     Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
+
                                     startActivity(intent);
                                     finish();
                                 }
