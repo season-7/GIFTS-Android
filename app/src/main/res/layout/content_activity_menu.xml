@@ -11,5 +11,24 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.mitchelle.giftzawadi.ActivityMenu"
     tools:showIn="@layout/app_bar_activity_menu">
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/giftsman"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/mangift"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/giftswoman"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/giftswoman"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FF000000"
+        android:layout_alignTop="@+id/giftsman"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
