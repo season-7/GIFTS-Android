@@ -21,13 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityLogin">
-
-        </activity>
+        <activity android:name=".ActivityLogin"></activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".ActivityResetPassword" />
         <activity android:name=".MainActivity" />
-
+        <activity
+            android:name=".ActivityMenu"
+            android:label="@string/title_activity_activity_menu"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

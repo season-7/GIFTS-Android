@@ -108,7 +108,7 @@ public class ActivityLogin extends AppCompatActivity {
                                     }
                                 } else {
 
-                                    Intent intent = new Intent(ActivityLogin.this, MainActivity.class);
+                                    Intent intent = new Intent(ActivityLogin.this, ActivityMenu.class);
 
                                     startActivity(intent);
                                     finish();
