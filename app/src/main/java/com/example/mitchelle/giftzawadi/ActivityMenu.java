@@ -41,6 +41,10 @@ public class ActivityMenu extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        AnimatedText text=(AnimatedText) findViewById(R.id.category1);
+        text.setCharacterDelay(100);
+        text.animateText("What is the gender of the Special Person");
     }
 
     @Override

@@ -14,11 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:background="@drawable/background_welcome"
+        android:background="@drawable/giftaurora"
 
         android:text="dummy"
         android:keepScreenOn="true"
-        android:textColor="@color/welcome_note"
+        android:textColor="@color/white"
         android:fontFamily="sans-serif-condensed"
         android:paddingTop="35dp"
         android:textSize="30sp"
@@ -54,9 +54,8 @@
             <Button
                 android:id="@+id/dummy_button"
                 style="?metaButtonBarButtonStyle"
-                android:textColor="@color/welcome_note"
+                android:textColor="@color/white"
                 android:layout_width="0dp"
-                android:background="#333"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/btn_swipe" />
