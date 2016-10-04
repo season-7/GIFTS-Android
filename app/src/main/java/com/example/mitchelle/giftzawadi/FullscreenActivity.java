@@ -100,7 +100,7 @@ public class FullscreenActivity extends AppCompatActivity {
         mContentView = findViewById(R.id.fullscreen_content);
 
 
-        // Set up the user interaction to manually show or hide the system UI.
+       // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -112,7 +112,7 @@ public class FullscreenActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         swipe=(Button) findViewById(R.id.dummy_button);
-       /* swipe.setOnClickListener(new View.OnClickListener() {
+        /*swipe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(FullscreenActivity.this,ActivityLogin.class));

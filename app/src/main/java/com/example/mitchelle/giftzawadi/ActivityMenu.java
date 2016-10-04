@@ -13,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 public class ActivityMenu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,21 @@ public class ActivityMenu extends AppCompatActivity
         AnimatedText text=(AnimatedText) findViewById(R.id.category1);
         text.setCharacterDelay(100);
         text.animateText("What is the gender of the Special Person");
+
+
+
+        final ImageView menuCircle =(ImageView)findViewById(R.id.giftsman);
+        menuCircle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ActivityMenu.this,AgeActivity.class));
+
+            }
+        });
+
+
     }
+
 
     @Override
     public void onBackPressed() {
@@ -56,6 +73,8 @@ public class ActivityMenu extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
