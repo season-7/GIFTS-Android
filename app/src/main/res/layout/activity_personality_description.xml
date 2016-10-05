@@ -1,108 +1,169 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
-    <!-- A CardView that contains a TextView -->
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_activeman"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        card_view:cardCornerRadius="4dp"></android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_gadgetman"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        card_view:cardCornerRadius="4dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"></android.support.v7.widget.CardView>
 
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".PersonalityDescriptionActivity">
 
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_fashionistaman"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        card_view:cardCornerRadius="4dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"></android.support.v7.widget.CardView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
 
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_foodieman"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        card_view:cardCornerRadius="4dp"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/card_gadgetman"></android.support.v7.widget.CardView>
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_movieman"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        card_view:cardCornerRadius="4dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"></android.support.v7.widget.CardView>
+    </RelativeLayout>
 
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_bookman"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        card_view:cardCornerRadius="4dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/card_foodieman"></android.support.v7.widget.CardView>
+</LinearLayout>
+    <!-- <android.support.v7.widget.CardView
+         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/card_gadgetman"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         card_view:cardCornerRadius="4dp"
+         android:layout_marginRight="20dp"
+         android:layout_alignParentTop="true"
+         android:layout_alignParentEnd="true">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/bookmanfinal"
+             />
+     </android.support.v7.widget.CardView>
 
-    <Button
-        android:id="@+id/buttondescription1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="30dp" />
 
-    <Button
-        android:id="@+id/buttondescription2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttondescription1"
-        android:layout_alignStart="@+id/buttonfoodieman" />
 
-    <Button
-        android:id="@+id/buttonfashionistaman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/buttondescription1" />
+     <android.support.v7.widget.CardView
+         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/card_fashionistaman"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         card_view:cardCornerRadius="4dp"
+         android:layout_marginLeft="13dp"
 
-    <Button
-        android:id="@+id/buttonfoodieman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonfashionistaman"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="30dp" />
+         android:layout_centerVertical="true"
+         android:layout_alignParentStart="true">
 
-    <Button
-        android:id="@+id/buttonmovieman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/card_movieman"
-        android:layout_alignStart="@+id/buttonfashionistaman"
-        android:layout_marginTop="45dp" />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/gadgetpeople"
+             />
+     </android.support.v7.widget.CardView>
 
-    <Button
-        android:id="@+id/buttonbookman"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/buttonmovieman"
-        android:layout_alignStart="@+id/buttonfoodieman" />
+     <android.support.v7.widget.CardView
+         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/card_foodieman"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         card_view:cardCornerRadius="4dp"
+         android:layout_centerVertical="true"
+         android:layout_alignStart="@+id/card_gadgetman">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/fashionman"
+             />
+     </android.support.v7.widget.CardView>
+     <android.support.v7.widget.CardView
+         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/card_movieman"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         android:layout_marginLeft="13dp"
 
-</RelativeLayout>
+         card_view:cardCornerRadius="4dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentStart="true">
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/foodiepeople"
+             />
+     </android.support.v7.widget.CardView>
+
+     <android.support.v7.widget.CardView
+         xmlns:card_view="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/card_bookman"
+         android:layout_width="150dp"
+         android:layout_height="150dp"
+         card_view:cardCornerRadius="4dp"
+         android:layout_alignParentBottom="true"
+         android:layout_alignStart="@+id/card_foodieman">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/moviepeople"
+             />
+     </android.support.v7.widget.CardView>
+
+
+
+     <Button
+         android:id="@+id/buttondescription2"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Reader"
+         android:textColor="@color/white"
+         android:padding="6dp"
+         android:background="@drawable/custom_button"
+         android:layout_alignTop="@+id/buttondescription1"
+         android:layout_alignStart="@+id/buttonfoodieman" />
+
+     <Button
+         android:id="@+id/buttonfashionistaman"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Gadget Person"
+         android:textColor="@color/white"
+         android:padding="6dp"
+         android:background="@drawable/custom_button"
+         android:layout_centerVertical="true"
+         android:layout_alignEnd="@+id/card_fashionistaman"
+         android:layout_marginEnd="13dp" />
+
+     <Button
+         android:id="@+id/buttonfoodieman"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@drawable/custom_button"
+         android:layout_marginEnd="27dp"
+         android:text="Fahionista"
+         android:textColor="@color/white"
+         android:padding="6dp"
+         android:layout_alignTop="@+id/buttonfashionistaman"
+         android:layout_alignEnd="@+id/card_foodieman" />
+
+     <Button
+         android:id="@+id/buttonmovieman"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="44dp"
+         android:text="Foodie"
+         android:textColor="@color/white"
+         android:padding="6dp"
+         android:background="@drawable/custom_button"
+         android:layout_alignTop="@+id/card_movieman"
+         android:layout_alignStart="@+id/buttondescription1"
+         android:layout_marginStart="8dp" />
+
+     <Button
+         android:id="@+id/buttonbookman"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:background="@drawable/custom_button"
+         android:text="Movie Holic"
+         android:textColor="@color/white"
+         android:padding="6dp"
+         android:layout_alignTop="@+id/buttonmovieman"
+         android:layout_alignStart="@+id/buttonfoodieman" />-->
+
+
+
