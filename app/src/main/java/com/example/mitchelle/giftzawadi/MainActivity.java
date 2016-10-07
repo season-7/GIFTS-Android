@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {private Button btnChangeEma
                 if (user == null) {
                     // user auth state is changed - user is null
                     // launch login activity
-                    startActivity(new Intent(MainActivity.this, Activity.class));
+                    startActivity(new Intent(MainActivity.this, ThanksNoteActivity.class));
                     finish();
                 }
             }

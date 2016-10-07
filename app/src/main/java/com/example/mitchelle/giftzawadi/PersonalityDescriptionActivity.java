@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class PersonalityDescriptionActivity extends AppCompatActivity {
     private GridLayoutManager lLayout;
 
@@ -26,6 +27,10 @@ public class PersonalityDescriptionActivity extends AppCompatActivity {
         RecyclerViewAdapter rcAdapter = new RecyclerViewAdapter(PersonalityDescriptionActivity.this, rowListItem);
         rView.setAdapter(rcAdapter);
 
+        AnimatedText writer=(AnimatedText) findViewById(R.id.desctext);
+        writer.setCharacterDelay(150);
+        writer.animateText("Which Category best suits them?");
+
     }
 
 
@@ -35,10 +40,14 @@ public class PersonalityDescriptionActivity extends AppCompatActivity {
         List<MYObject> allItems = new ArrayList<MYObject>();
         allItems.add(new MYObject("Foodie", R.drawable.foodiepeople));
         allItems.add(new MYObject("Gadget Lover", R.drawable.gadgetpeople));
-        allItems.add(new MYObject("Fashion Freak", R.drawable.fashionman));
+        allItems.add(new MYObject("Fashion Freak", R.drawable.fashion));
         allItems.add(new MYObject("Reader", R.drawable.bookmanfinal));
-        allItems.add(new MYObject("Movieholic", R.drawable.moviepeople));
+        allItems.add(new MYObject("Movieholic", R.drawable.newmovies));
         allItems.add(new MYObject("Sporty", R.drawable.finalactiveman));
+        allItems.add(new MYObject("Event Goer", R.drawable.eventsperson));
+        allItems.add(new MYObject("Artistic", R.drawable.artsperson));
+
+
 
 
         return allItems;

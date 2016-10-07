@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/card_view"
     android:layout_width="150dp"
-    android:layout_height="150dp"
+    android:layout_height="160dp"
     card_view:cardUseCompatPadding="true"
     card_view:cardCornerRadius="8dp"
     android:layout_marginBottom="16dp">
@@ -15,11 +15,12 @@
 
         <ImageView
             android:id="@+id/photodescriptioncat"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="@string/action_settings"
             android:src="@drawable/finalactiveman"
-            android:scaleType="centerCrop" />
+            android:scaleType="fitXY"
+            />
 
         <TextView
             android:id="@+id/textdescriptioncat"
@@ -31,7 +32,6 @@
             android:gravity="center"
             android:layout_below="@+id/photodescriptioncat"
             android:paddingBottom="8dp"
-            android:layout_marginTop="-30dp"
             android:paddingTop="8dp"
             android:layout_alignParentBottom="true"
             android:background="@color/cardview_dark_background"/>

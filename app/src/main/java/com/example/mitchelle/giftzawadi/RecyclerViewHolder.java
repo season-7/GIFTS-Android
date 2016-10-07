@@ -1,5 +1,6 @@
 package com.example.mitchelle.giftzawadi;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +28,11 @@ public class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.
     @Override
     public void onClick(View view) {
         Toast.makeText(view.getContext(), "Clicked Description = " + getPosition(), Toast.LENGTH_SHORT).show();
+
+        Intent intentnew = new Intent(view.getContext(), SweetorsmackActivity.class);
+        view.getContext().startActivity(intentnew);
+
+       // Intent intent=new Intent()
 
 
     }
