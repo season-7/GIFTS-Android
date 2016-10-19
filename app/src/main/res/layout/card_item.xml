@@ -2,14 +2,14 @@
 <android.support.v7.widget.CardView
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/card_view"
+    android:id="@+id/card_viewone"
     android:layout_width="150dp"
     android:layout_height="160dp"
     card_view:cardUseCompatPadding="true"
-    card_view:cardCornerRadius="8dp"
-    android:layout_marginBottom="16dp">
+    card_view:cardCornerRadius="8dp">
 
     <RelativeLayout
+        android:id="@+id/roott"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -19,8 +19,7 @@
             android:layout_height="wrap_content"
             android:contentDescription="@string/action_settings"
             android:src="@drawable/finalactiveman"
-            android:scaleType="fitXY"
-            />
+            android:scaleType="fitXY" />
 
         <TextView
             android:id="@+id/textdescriptioncat"
@@ -30,11 +29,10 @@
             android:text="Sporty"
             android:textColor="@color/white"
             android:gravity="center"
-            android:layout_below="@+id/photodescriptioncat"
-            android:paddingBottom="8dp"
-            android:paddingTop="8dp"
+
             android:layout_alignParentBottom="true"
-            android:background="@color/cardview_dark_background"/>
+            android:background="@color/cardview_dark_background"
+            android:layout_below="@+id/photodescriptioncat" />
 
     </RelativeLayout>
 

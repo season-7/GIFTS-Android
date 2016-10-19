@@ -68,6 +68,13 @@
             android:textColor="@android:color/white" />
 
         <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="continue"
+            android:id="@+id/button"
+            android:layout_gravity="right" />
+
+        <Button
             android:id="@+id/btn_reset_password"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -89,6 +96,7 @@
             android:textAllCaps="false"
             android:textColor="@color/email_suggestions"
             android:textSize="15dp" />
+
     </LinearLayout>
 
     <ProgressBar

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context="com.example.mitchelle.giftzawadi.FullscreenActivity">
+    tools:context=".FullscreenActivity">
 
 
     <!-- The primary full-screen view. This can be replaced with whatever view
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
-        android:background="@drawable/giftaurora"
+        android:background="@color/bg_main"
 
         android:text="dummy"
         android:keepScreenOn="true"

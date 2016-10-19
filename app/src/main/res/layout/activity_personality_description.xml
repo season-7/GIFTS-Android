@@ -1,4 +1,14 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/recycler_margin_vertical"
+    android:paddingLeft="@dimen/recycler_margin_horizontal"
+    android:paddingRight="@dimen/recycler_margin_horizontal"
+    android:paddingTop="@dimen/recycler_margin_vertical">
+</FrameLayout>
+<!--
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,18 +17,11 @@
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/root_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp">
-
-        <com.example.mitchelle.giftzawadi.AnimatedText
-            android:id="@+id/desctext"
-            android:padding="10dp"
-            android:textColor="@color/input_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </android.support.v7.widget.CardView>
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,7 +36,18 @@
             android:scrollbars="vertical" />
 
     </RelativeLayout>
+-->
 
-</LinearLayout>
+<!--</LinearLayout>-->
+      <!--  <com.example.mitchelle.giftzawadi.AnimatedText
+            android:id="@+id/desctext"
+            android:padding="10dp"
+            android:textColor="@color/input_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>-->
+
+
+
 
 

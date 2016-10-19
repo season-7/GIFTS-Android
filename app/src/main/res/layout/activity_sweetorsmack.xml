@@ -1,71 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    android:id="@+id/inflateme"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:background="@drawable/sweetorsnack"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mitchelle.giftzawadi.SweetorsmackActivity">
-<com.example.mitchelle.giftzawadi.AnimatedText
-    android:id="@+id/sweetorsnack"
-    android:textSize="16sp"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="10dp"
-    android:textColor="@color/white"/>
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/pressweet"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/input_login"
-        android:text="Oops, not something too sweet"
-        android:padding="10dp"
+        android:layout_marginTop="10dp">
 
-        android:textColor="@color/white"
-        android:layout_marginBottom="154dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignEnd="@+id/smallsnack" />
-    <Button
-        android:id="@+id/smallsweet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:text="Snack Lover"
-        android:padding="10dp"
-        android:textColor="@color/white"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/pressweet"
-        android:layout_toLeftOf="@+id/smallsnack"
-        android:layout_marginRight="38dp" />
-    <TextView
-        android:id="@+id/pressnack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        <!--<com.example.mitchelle.giftzawadi.AnimatedText
+            android:id="@+id/desctext"
+            android:padding="10dp"
+            android:textColor="@color/input_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />-->
+    </android.support.v7.widget.CardView>
 
-        android:background="@color/input_login"
-        android:text="Sugar is the way to go"
-        android:padding="10dp"
 
-        android:textColor="@color/white"
-        android:layout_below="@+id/smallsnack"
-        android:layout_alignEnd="@+id/smallsnack"
-        android:layout_marginEnd="53dp" />
-    <Button
-        android:id="@+id/smallsnack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/custom_button"
-        android:text="Sweet Lover"
-        android:padding="10dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        tools:context=".SweetorsmackActivity">
 
-        android:textColor="@color/white"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="32dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sweetorsnackrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
 
-</RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
+
+
