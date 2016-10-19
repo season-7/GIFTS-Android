@@ -22,6 +22,6 @@ public class PicassoClient {
 
         else {
 
-            Picasso.with(context).load(R.drawable.eventsperson).into(imageView);
+            Picasso.with(context).load(R.drawable.fashion).into(imageView);
         }
     }}

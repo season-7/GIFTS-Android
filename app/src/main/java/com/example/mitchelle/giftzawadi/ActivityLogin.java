@@ -22,7 +22,7 @@ public class ActivityLogin extends AppCompatActivity {
     private EditText inputEmail, inputPassword;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
-    private Button btnSignup, btnLogin, btnReset;
+    private Button btnSignup, btnLogin, btnReset,btnContinue;
 
 
     @Override
@@ -50,6 +50,7 @@ public class ActivityLogin extends AppCompatActivity {
         btnSignup = (Button) findViewById(R.id.btn_signup);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnReset = (Button) findViewById(R.id.btn_reset_password);
+        btnContinue=(Button)findViewById(R.id.button) ;
 
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
@@ -59,6 +60,13 @@ public class ActivityLogin extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(ActivityLogin.this, SignUpActivity.class));
+
+            }
+        });
+        btnContinue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ActivityLogin.this, ActivityMenu.class));
 
             }
         });

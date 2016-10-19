@@ -11,15 +11,18 @@ import android.widget.Toast;
  */
 public class FinalHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-    public TextView titledescription,description;
-    public ImageView titleimage;
+    public TextView itemName,itemdescription,itemPrice;
+    public ImageView itemImage;
 
     public FinalHolder(View itemView) {
         super(itemView);
         itemView.setOnClickListener(this);
-        titledescription=(TextView) itemView.findViewById(R.id.titleofchoice);
-        description=(TextView) itemView.findViewById(R.id.describetitle);
-        titleimage=(ImageView) itemView.findViewById(R.id.imagechoice);
+        itemImage=(ImageView) itemView.findViewById(R.id.contentImage);
+        itemName=(TextView) itemView.findViewById(R.id.contentother);
+        itemdescription=(TextView) itemView.findViewById(R.id.content);
+        itemPrice=(TextView)itemView.findViewById(R.id.contenprice);
+
+
     }
 
     @Override
