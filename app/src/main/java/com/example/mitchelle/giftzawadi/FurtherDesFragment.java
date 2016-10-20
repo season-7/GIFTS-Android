@@ -34,73 +34,92 @@ public class FurtherDesFragment extends ListFragment  {
     int[] foodimages = new int[]{
             R.drawable.foodiepeople,
             R.drawable.artsperson
-           /* R.drawable.fashion,
-            R.drawable.gadgetpeople,
-            R.drawable.bookmanfinal,
-            R.drawable.newmovies,
-            R.drawable.eventsperson,
-            R.drawable.finalactiveman*/
-
-
     };
-    /////end foodie
-    ////////
 
-    // Array of strings to store currencies
+
+
     String[] currency = new String[]{
             "Indian Rupee",
             "Pakistani Rupee",
-           /* "Sri Lankan Rupee",
-            "Renminbi",
-            "Bangladeshi Taka",
-            "Nepalese Rupee",
-            "Afghani",
-            "North Korean Won",
-            "South Korean Won",
-            "Japanese Yen"*/
     };
+    /////end foodie
+    ////////
 
     ////arts
 
     String[] arts = new String[] {
             "Foodie",
             "Arts Person",
-           /* "Fashionista",
-            "Gadgets Person",
-            "Books Reader",
-            "Movie Freak",
-            "Event Person",
-            "Sporty Person"*/
     };
 
     int[] artimages = new int[]{
             R.drawable.bookmanfinal,
             R.drawable.newmovies
-           /* R.drawable.fashion,
-            R.drawable.gadgetpeople,
+    };
+
+
+
+    String[] additional = new String[]{
+            "Indian Rupee",
+            "Pakistani Rupee",
+    };
+    /////end arts
+    ////////
+    String[] fashionista = new String[] {
+            "Foodie",
+            "Arts Person",
+    };
+
+    int[] fashionistaimages = new int[]{
             R.drawable.bookmanfinal,
-            R.drawable.newmovies,
-            R.drawable.eventsperson,
-            R.drawable.finalactiveman*/
+            R.drawable.newmovies
+    };
 
-
+    // Array of strings to store additional information
+    String[] additionalfashion = new String[]{
+            "this",
+            "that",
     };
     /////end foodie
     ////////
 
-    // Array of strings to store currencies
-    String[] additional = new String[]{
-            "Indian Rupee",
-            "Pakistani Rupee",
-           /* "Sri Lankan Rupee",
-            "Renminbi",
-            "Bangladeshi Taka",
-            "Nepalese Rupee",
-            "Afghani",
-            "North Korean Won",
-            "South Korean Won",
-            "Japanese Yen"*/
+    String[] gadgets = new String[] {
+            "Foodie",
+            "Arts Person",
     };
+
+    int[] gadgetimages = new int[]{
+            R.drawable.bookmanfinal,
+            R.drawable.newmovies
+    };
+
+    // Array of strings to store additional information
+    String[] additionalgadget = new String[]{
+            "nice",
+            "cool",
+    };
+    /////end foodie
+    ////////
+
+    String[] books = new String[] {
+            "Foodie",
+            "Arts Person",
+    };
+
+    int[] bookimages = new int[]{
+            R.drawable.bookmanfinal,
+            R.drawable.newmovies
+    };
+
+    // Array of strings to store additional information
+    String[] additionalbook = new String[]{
+            "nice",
+            "cool",
+    };
+    /////end foodie
+    ////////
+
+
     public String cat;
 
     @Override
@@ -115,7 +134,7 @@ public class FurtherDesFragment extends ListFragment  {
 
         if(cat.equals("Foodie")){
 
-            // Each row in the list stores country name, currency and flag
+            // Each row in the list stores gift, name and description
             List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
 
             for(int i=0;i<9;i++){
@@ -123,7 +142,7 @@ public class FurtherDesFragment extends ListFragment  {
                     HashMap<String, String> hm = new HashMap<String,String>();
                     hm.put("txt", " " + foods[i]);
                     hm.put("cur"," " + currency[i]);
-                    hm.put("flag", Integer.toString(foodimages[i]) );
+                    hm.put("gift", Integer.toString(foodimages[i]) );
                     aList.add(hm);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -131,7 +150,8 @@ public class FurtherDesFragment extends ListFragment  {
             }
 
             // Keys used in Hashmap
-            String[] from = { "flag","txt"};
+            String[] from = { "gift","txt"};
+
 
             // Ids of views in listview_layout
             int[] to = { R.id.flag,R.id.txt};
@@ -145,7 +165,7 @@ public class FurtherDesFragment extends ListFragment  {
             getActivity().setTitle(cat);
 
         }else if(cat.equals("Arts Person")){
-            // Each row in the list stores country name, currency and flag
+
             List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
 
             for(int i=0;i<9;i++){
@@ -153,7 +173,7 @@ public class FurtherDesFragment extends ListFragment  {
                     HashMap<String, String> hm = new HashMap<String,String>();
                     hm.put("txt", " " + arts[i]);
                     hm.put("cur"," " + additional[i]);
-                    hm.put("flag", Integer.toString(artimages[i]) );
+                    hm.put("gift", Integer.toString(artimages[i]) );
                     aList.add(hm);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -161,7 +181,7 @@ public class FurtherDesFragment extends ListFragment  {
             }
 
             // Keys used in Hashmap
-            String[] from = { "flag","txt"};
+            String[] from = { "gift","txt"};
 
             // Ids of views in listview_layout
             int[] to = { R.id.flag,R.id.txt};
@@ -177,13 +197,99 @@ public class FurtherDesFragment extends ListFragment  {
 
 
 
-        }else if(cat.equals("Foodie")){
+        }else if(cat.equals("Fashionista")){
+
+            List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
+
+            for(int i=0;i<9;i++){
+                try {
+                    HashMap<String, String> hm = new HashMap<String,String>();
+                    hm.put("txt", " " + fashionista[i]);
+                    hm.put("cur"," " + additionalfashion[i]);
+                    hm.put("gift", Integer.toString(fashionistaimages[i]) );
+                    aList.add(hm);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            // Keys used in Hashmap
+            String[] from = { "gift","txt","cur"};
+
+            // Ids of views in listview_layout
+            int[] to = { R.id.flag,R.id.txt,R.id.txt2};
+
+            // Instantiating an adapter to store each items
+            // R.layout.listview_layout defines the layout of each item
+
+            SimpleAdapter adapter = new SimpleAdapter(getActivity().getBaseContext(), aList, R.layout.listview_layout, from, to);
+
+            setListAdapter(adapter);
+            getActivity().setTitle(cat);
 
 
-        }else if(cat.equals("Foodie")){
 
 
-        }else if(cat.equals("Foodie")){
+        }else if(cat.equals("Gadgets Person")){
+            List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
+
+            for(int i=0;i<9;i++){
+                try {
+                    HashMap<String, String> hm = new HashMap<String,String>();
+                    hm.put("txt", " " + gadgets[i]);
+                    hm.put("cur"," " + additionalgadget[i]);
+                    hm.put("gift", Integer.toString(gadgetimages[i]) );
+                    aList.add(hm);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            // Keys used in Hashmap
+            String[] from = { "gift","txt","cur"};
+
+            // Ids of views in listview_layout
+            int[] to = { R.id.flag,R.id.txt,R.id.txt2};
+
+            // Instantiating an adapter to store each items
+            // R.layout.listview_layout defines the layout of each item
+
+            SimpleAdapter adapter = new SimpleAdapter(getActivity().getBaseContext(), aList, R.layout.listview_layout, from, to);
+
+            setListAdapter(adapter);
+            getActivity().setTitle(cat);
+
+
+
+        }else if(cat.equals("Books Reader")){
+
+            List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
+
+            for(int i=0;i<9;i++){
+                try {
+                    HashMap<String, String> hm = new HashMap<String,String>();
+                    hm.put("txt", " " + books[i]);
+                    hm.put("cur"," " + additionalbook[i]);
+                    hm.put("gift", Integer.toString(bookimages[i]) );
+                    aList.add(hm);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            // Keys used in Hashmap
+            String[] from = { "gift","txt","cur"};
+
+            // Ids of views in listview_layout
+            int[] to = { R.id.flag,R.id.txt,R.id.txt2};
+
+            // Instantiating an adapter to store each items
+            // R.layout.listview_layout defines the layout of each item
+
+            SimpleAdapter adapter = new SimpleAdapter(getActivity().getBaseContext(), aList, R.layout.listview_layout, from, to);
+
+            setListAdapter(adapter);
+            getActivity().setTitle(cat);
 
 
         }else if(cat.equals("Foodie")){
