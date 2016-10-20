@@ -23,23 +23,23 @@ public class FurtherDesFragment extends ListFragment  {
     String[] foods = new String[] {
             "Foodie",
             "Arts Person",
-            "Fashionista",
+           /* "Fashionista",
             "Gadgets Person",
             "Books Reader",
             "Movie Freak",
             "Event Person",
-            "Sporty Person"
+            "Sporty Person"*/
     };
 
     int[] foodimages = new int[]{
             R.drawable.foodiepeople,
-            R.drawable.artsperson,
-            R.drawable.fashion,
+            R.drawable.artsperson
+           /* R.drawable.fashion,
             R.drawable.gadgetpeople,
             R.drawable.bookmanfinal,
             R.drawable.newmovies,
             R.drawable.eventsperson,
-            R.drawable.finalactiveman
+            R.drawable.finalactiveman*/
 
 
     };
@@ -50,14 +50,56 @@ public class FurtherDesFragment extends ListFragment  {
     String[] currency = new String[]{
             "Indian Rupee",
             "Pakistani Rupee",
-            "Sri Lankan Rupee",
+           /* "Sri Lankan Rupee",
             "Renminbi",
             "Bangladeshi Taka",
             "Nepalese Rupee",
             "Afghani",
             "North Korean Won",
             "South Korean Won",
-            "Japanese Yen"
+            "Japanese Yen"*/
+    };
+
+    ////arts
+
+    String[] arts = new String[] {
+            "Foodie",
+            "Arts Person",
+           /* "Fashionista",
+            "Gadgets Person",
+            "Books Reader",
+            "Movie Freak",
+            "Event Person",
+            "Sporty Person"*/
+    };
+
+    int[] artimages = new int[]{
+            R.drawable.bookmanfinal,
+            R.drawable.newmovies
+           /* R.drawable.fashion,
+            R.drawable.gadgetpeople,
+            R.drawable.bookmanfinal,
+            R.drawable.newmovies,
+            R.drawable.eventsperson,
+            R.drawable.finalactiveman*/
+
+
+    };
+    /////end foodie
+    ////////
+
+    // Array of strings to store currencies
+    String[] additional = new String[]{
+            "Indian Rupee",
+            "Pakistani Rupee",
+           /* "Sri Lankan Rupee",
+            "Renminbi",
+            "Bangladeshi Taka",
+            "Nepalese Rupee",
+            "Afghani",
+            "North Korean Won",
+            "South Korean Won",
+            "Japanese Yen"*/
     };
     public String cat;
 
@@ -102,7 +144,35 @@ public class FurtherDesFragment extends ListFragment  {
             setListAdapter(adapter);
             getActivity().setTitle(cat);
 
-        }else if(cat.equals("Foodie")){
+        }else if(cat.equals("Arts Person")){
+            // Each row in the list stores country name, currency and flag
+            List<HashMap<String,String>> aList = new ArrayList<HashMap<String,String>>();
+
+            for(int i=0;i<9;i++){
+                try {
+                    HashMap<String, String> hm = new HashMap<String,String>();
+                    hm.put("txt", " " + arts[i]);
+                    hm.put("cur"," " + additional[i]);
+                    hm.put("flag", Integer.toString(artimages[i]) );
+                    aList.add(hm);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+            // Keys used in Hashmap
+            String[] from = { "flag","txt"};
+
+            // Ids of views in listview_layout
+            int[] to = { R.id.flag,R.id.txt};
+
+            // Instantiating an adapter to store each items
+            // R.layout.listview_layout defines the layout of each item
+
+            SimpleAdapter adapter = new SimpleAdapter(getActivity().getBaseContext(), aList, R.layout.listview_layout, from, to);
+
+            setListAdapter(adapter);
+            getActivity().setTitle(cat);
 
 
 
