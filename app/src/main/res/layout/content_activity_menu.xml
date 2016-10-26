@@ -10,12 +10,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.mitchelle.giftzawadi.ActivityMenu"
+    tools:context=".Activities.ActivityMenu"
     tools:showIn="@layout/app_bar_activity_menu">
 
-    <com.example.mitchelle.giftzawadi.AnimatedText
+    <com.example.mitchelle.giftzawadi.Extra.AnimatedText
         android:id="@+id/category1"
-        android:textColor="@color/email_suggestions"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
@@ -24,17 +24,27 @@
     <Button
         android:id="@+id/giftsman"
         android:layout_width="wrap_content"
-        android:gravity="right"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:text="Male"
         />
     <Button
+        android:layout_toRightOf="@+id/giftsman"
         android:id="@+id/giftswoman"
+        android:layout_marginLeft="150dp"
+        android:padding="6dp"
+        android:paddingRight="20dp"
         android:layout_width="wrap_content"
-        android:gravity="start"
+        android:gravity="center_vertical"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:background="@drawable/custom_button"
         android:text="Female"
         />
+
 </RelativeLayout>

@@ -7,9 +7,9 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.mitchelle.giftzawadi.ThanksNoteActivity">
+    tools:context=".Activities.ThanksNoteActivity">
 
-    <com.example.mitchelle.giftzawadi.AnimatedText
+    <com.example.mitchelle.giftzawadi.Extra.AnimatedText
         android:id="@+id/thanksnote"
         android:padding="10dp"
         android:textColor="@color/input_login_hint"

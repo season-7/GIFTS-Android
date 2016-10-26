@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ActivityLogin">
+    tools:context=".Activities.ActivityLogin">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -62,17 +62,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="@color/input_login_hint"
+            android:background="@color/colorPrimary"
 
             android:text="@string/btn_login"
             android:textColor="@android:color/white" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="continue"
-            android:id="@+id/button"
-            android:layout_gravity="right" />
 
         <Button
             android:id="@+id/btn_reset_password"
@@ -97,10 +90,20 @@
             android:textColor="@color/email_suggestions"
             android:textSize="15dp" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:text="continue"
+            android:textColor="@color/white"
+            android:id="@+id/button"
+            android:layout_gravity="center_horizontal" />
+
     </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressBar"
+
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_gravity="center|bottom"

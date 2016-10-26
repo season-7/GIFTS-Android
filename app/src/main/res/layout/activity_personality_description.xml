@@ -39,7 +39,7 @@
 -->
 
 <!--</LinearLayout>-->
-      <!--  <com.example.mitchelle.giftzawadi.AnimatedText
+      <!--  <com.example.mitchelle.giftzawadi.Extra.AnimatedText
             android:id="@+id/desctext"
             android:padding="10dp"
             android:textColor="@color/input_login"

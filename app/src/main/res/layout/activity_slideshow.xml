@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/input_login"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    tools:context=".Activities.SlideshowActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPageAndroid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/taptocontinue"
+        android:textColor="@color/white"
+
+        android:background="@color/colorPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to continue"
+        android:layout_alignBottom="@+id/viewPageAndroid"
+        android:layout_alignEnd="@+id/viewPageAndroid"
+        android:layout_alignParentStart="true" />
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar2"
+        android:layout_alignStart="@+id/viewPageAndroid" />
+
+</RelativeLayout>

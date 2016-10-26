@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/bg_login"
+    android:background="@color/listim"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scaleType="fitXY"
     android:orientation="vertical" >
 
     <ImageView
         android:id="@+id/flag"
         android:src="@drawable/finalactiveman"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="230dp"
         android:layout_alignParentTop="true"
         android:scaleType="centerCrop"
         android:contentDescription="helloworld"
@@ -17,18 +19,34 @@
 
     <LinearLayout
         android:id="@+id/click"
+        android:layout_marginTop="-4dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <TextView
             android:id="@+id/txt"
             android:maxLines="3"
             android:textColor="@color/white"
-            android:background="@drawable/custom_button"
+
+            android:textAlignment="center"
             android:padding="8dp"
             android:text="fghj"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_weight="0.04" />
+
+        <TextView
+            android:id="@+id/txt2"
+            android:maxLines="3"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAlignment="center"
+            android:padding="8dp"
+            android:text="fghj"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="15dp" />
 
